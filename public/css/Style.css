@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); /*importa font da internet*/
+/* seletor universal */
+*{
+    box-sizing: border-box;/*define a altura e a largura a ser calculada*/
+    padding: 0;
+    margin:0;
+    outline: none;/*Um contorno é uma linha desenhada fora da borda do elemento.*/
+}
+/* manter do mesmo jeito no antes e depois */
+::before,::after{
+    box-sizing: border-box;/*define a altura e a largura a ser calculada*/
+}
+
+/* configura o corpo inteiro da pagina */
+body{
+    min-height: 100vh;/*altura minima*/
+    background-image: linear-gradient(#8AA6A3,#127369);/*cria um fundo gradiente*/
+    background-attachment: fixed;/*define se o bloco vai rolar no viewport*/
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;/*seta o "peso" da fonte*/
+    color: black;
+    line-height: 1.5;
+    overflow-x: hidden;/*define se o bloco deve ser cortado ou não*/
+    -webkit-tap-highlight-color: transparent;/*função que define a cor de um link*/
+    padding: 5vh 15vh;
+}
+/* insere mais coisas  */
+body ::before{
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;/*seta a posição dos elementos*/
+    opacity: 0.12;/*define a opacidade do elemento*/
+}
+/* estilização de link */
+a{
+    text-decoration: none;/*seta os decorativos da linha de texto*/
+}
+/* estilização de h1 e h2 */
+h1,h2{
+    font-weight: 600;/*seta o "peso" da fonte*/
+}
+/* estilização dos demais titulos  */
+h3,h4,h5,h6{
+    font-weight: 500;/*seta o "peso" da fonte*/
+}
+/* configuração de imagens */
+img{
+    max-width: 100%;/*largura maxima*/
+    vertical-align:  middle;/*alinhamento vertical*/
+}
+/* configuração dos section */
+section{
+    max-width: 1200px;/*largura maxima*/
+}
+/* configuração da main  */
+.main{
+    max-width: 1200px;/*largura maxima*/
+    margin: auto;
+    background-color: rgba(240, 248, 255, 0.253);
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    min-height: 90vh;
+    border-radius: 30px;
+    backdrop-filter: black;/*define efeitos graficos*/
+}
+/* configuração do container */
+.container{
+    /* background-color: red; */
+    max-width: 1300px;/*largura maxima*/
+    padding: 0 40px;
+    width: 100%;
+}
+/* configuração da row */
+.row{
+    display: flex;/*define se os itens são tratados como bloxk ou inline*/ 
+    flex-wrap: wrap;/*define se é agrupado em uma linha ou varias*/
+}
+/* tag pre definida para alinhamento de itens */
+.align-itens-center{
+    align-items: center;/*alinha os itens*/
+}
+/* esconder itens */
+.hidden{
+    display: none /*define se os itens são tratados como bloxk ou inline*/!important;
+}
+/* configuração do titulo de section */
+.section-title{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+}
+/* configuração de h2 do titulo */
+.section-title h2{
+    font-size: 40px;
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+}
+/* configuração do p do titulo */
+.section-title p{
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+    text-align: right;
+}
+/* configuração do buttom */
+button{
+    font-family: inherit;
+    user-select: none ;/*fala se o usuario pode selecionar o texto*/
+}
+/* estilização do butão */
+.btn{
+    line-height: 1.5;
+    background-color: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    padding: 10px 28px;
+    display: inlin/*define se os itens são tratados como bloxk ou inline*/e-block;
+    border-radius: 30px;
+    color: black;
+    font-weight: 500;/*seta o "peso" da fonte*/
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;/*mostrar como é o tipo de cursor*/
+    user-select: none;/*fala se o usuario pode selecionar o texto*/    
+    position: relative;
+    overflow: hidden;/*define se o bloco deve ser cortado ou não*/
+    vertical-align: middle;/*define o linhamento vertical*/
+}
+/* ajuste de botão antes de virar btn */
+.btn::before{
+    content: ''; /*para inserir conteudo*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: -1;/*seta a posição dos elementos*/
+    transition: width 0.3s ease;/*define a transição*/
+}
+/* configuração do butao apos animação */
+.btn :hover ::before{
+    width: 100%;
+}
+/* configuração na animação */
+.btn:hover{
+    color: #fff;
+}
+/* configuração da section home */
+.home-section{
+    display: flex;/*define se os itens são tratados como bloxk ou inline*/
+    padding: 120px 0;
+    padding-bottom: 50px;
+}
+/* configuração do texto e imagem */
+.home-text, .home-img{
+    width: 50%;
+    padding: 15px;
+}
+/* ajuste da tag p na home */
+.home-text p{
+    font-size: 18px;
+    
+}
+/* ajuste da tag h1 na home */
+.home-text h1 {
+    font-size: 50px;
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+}
+/* ajuste da tag h2 na home */
+.home-text h2{
+    font-size: 20px;
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+    font-weight: 300;/*seta o "peso" da fonte*/
+}
+/* ajuste do botão na home */
+.home-text .btn{
+    margin: 0 15px 15px 0;
+}
+/* estilização da box de imagem */
+.home-img .img-box{
+    max-width: 360px;
+/*largura maxima*/    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.40);
+    margin: auto;
+}
+/* configuração da imagem da home */
+.home.img .img-box img{
+    width: 100%;
+    border-radius: 50%;
+}
+/* configuração da section da sobre mim */
+.about-section{
+    padding-top: 50px;
+}
+/* configuração da imagem  */
+.about-img{
+    /* background-color: red; */
+    width: 40%;
+    padding: 0 15px;
+}
+/* configuração do texto  */
+.about-text{
+    /* background-color: blue; */
+    width: 60%;
+    padding: 0 15px;
+}
+/* estilização da box da iamgem  */
+.about-img .img-box{
+    background-color: rgba(255, 255, 255, 0.20);
+    max-width: 380px;
+/*largura maxima*/    border: 1px solid rgba(255, 255, 255, 0.40);
+    margin: auto;
+    border-radius: 10px;
+}
+/* configuração da imagem  */
+.about-img .img-box img{
+    width: 100%;
+}
+/* configuração da h3  */
+.about-text h3{
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+    font-size: 20px;
+    margin: 20px 0;
+}
+/* configuração da box skill  */
+.about-text .skills{
+    display: flex;/*define se os itens são tratados como bloxk ou inline*/
+    flex-wrap: wrap;/*define se é agrupado em uma linha ou varias*/
+}
+/* estilização dos itens na box skills  */
+.about-text .skills-itens{
+    background-color: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    padding: 5px 15px;
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+    margin: 0 10px 10px 0;
+    border-radius: 20px;
+}
+
+.about-tabs{
+    margin-top: 20px;
+}
+/* estilização dos itens da box tabs  */
+.about-tabs .tab-item{
+    padding: 2px 0;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+    display: inlin/*define se os itens são tratados como bloxk ou inline*/e-block;
+    color: #000000;
+    font-size: 20px;
+    cursor: pointer;/*mostrar como é o tipo de cursor*/
+    font-weight: 500;/*seta o "peso" da fonte*/
+    margin: 0 30px 0 0;
+    position: relative;
+    opacity: 1;
+    transition: all 0.3s ease;
+}/*define a transição*/
+/* configuração dos itens da box intens  */
+.about-tabs .tab-item:last-child{
+    margin: 0;
+}
+/* configuração antes de virar itens  */
+.about-tabs .tab-item::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;/*define a transição*/
+}
+/* configuração antes de virar itens  */
+.about-tabs .tab-item:hover::before{
+    width: 100%;
+}
+/* configuração da timeline  */
+.about-text .timeline{
+    position: relative;
+}
+/* configuração da timeline antes  */
+.about-text .timeline::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    top: 0;
+    left: 5px;
+    background-color: #127369;
+}
+/* configuração do content do texto  */
+.about-text .tab-content{
+    padding: 40px 0;
+}
+/* configuração dos intens do texto  */
+.about-text .timeline-item{
+    margin-bottom: 30px;
+}
+/* configuração dos itens antes de virar itens da timeline  */
+.about-text .timeline-item::before{
+    content: '';
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    background-color: #127369;
+    left: 0;
+    top: 16px;
+}
+
+.about-text .timeline-item:last-child{
+    margin-bottom: 0;
+}
+/* configuração da box date  */
+.about-text .timeline-item .date{
+    display: block/*define se os itens são tratados como bloxk ou inline*/;
+    color: #127369;
+    font-weight: 400;/*seta o "peso" da fonte*/
+    margin: 0 0 10px;
+
+}
+/* configuração de h4  */
+.about-text .timeline-item h4{
+    font-size: 18px;
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+    margin: 0 0 10px;
+}
+/* configuração do span  */
+.about-text .timeline-item h4 span{
+    font-weight: 400;/*seta o "peso" da fonte*/
+}
+/* configuração do box item  */
+.portfolio-item{
+    width: calc(100 /2);
+    margin: 0 15px 30px;
+}
+/* configuração da imagem  */
+.portfolio-item-thumbnail img{
+    width: 100%;
+}
+/* configuração de h3  */
+.portfolio-item-thumbnail h3{
+    font-size: 20px;
+    text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
+    margin: 20px;
+}
