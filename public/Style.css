@@ -127,18 +127,7 @@ button{
     overflow: hidden;/*define se o bloco deve ser cortado ou não*/
     vertical-align: middle;/*define o linhamento vertical*/
 }
-/* ajuste de botão antes de virar btn */
-.btn::before{
-    content: ''; /*para inserir conteudo*/
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    z-index: -1;/*seta a posição dos elementos*/
-    transition: width 0.3s ease;/*define a transição*/
-}
+
 /* configuração do butao apos animação */
 .btn :hover ::before{
     width: 100%;
@@ -347,3 +336,4 @@ button{
     text-transform: capitalize;/*mostrar se o texto vai aparecer em maiusculo ou minisculo*/
     margin: 20px;
 }
+

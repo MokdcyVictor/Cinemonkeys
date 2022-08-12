@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/Style.css">
+    <link rel="stylesheet" href="Style.css">
     <title>Document</title>
 </head>
 <body>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="home-img">
                     <div class="img-box">
-                        <img src="../public/imagens/Foto.png" alt="">
+                        <img src="imagens/Foto.png" alt="">
                     </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="about-img">
                     <div class="img-box">
-                        <img src="../Frontend/imagens/" alt="">
+                        <img src="imagens/" alt="">
                     </div>
                 </div>
                 <div class="about-text">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-item-tumbnail">
-                        <img src="./public/imagens/landingPage.png" alt="">
+                        <img src="imagens/landingPage.png" alt="">
                     </div>
                     <h3 class="portfolio-item-text">Landing Page </h3>
                 </div>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-item-tumbnail">
-                        <img src="" alt="">
+                        <img src="imagens/ProjectAI.png" alt="">
                     </div>
                     <h3 class="portfolio-item-text">site de turma </h3>
                 </div>
@@ -95,7 +95,7 @@
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-item-tumbnail">
-                        <img src="./Frontend/imagens/Login.png" alt="">
+                        <img src="imagens/Login.png" alt="">
                     </div>
                     <h3 class="portfolio-item-text">site de turma </h3>
                 </div>
@@ -106,6 +106,30 @@
         </div>
     </section>
 </div>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyB0xYXJW8tS_Y_tiSBuVWTgSJ7PIWdzDDo",
+      authDomain: "project-x-690a8.firebaseapp.com",
+      databaseURL: "https://project-x-690a8-default-rtdb.firebaseio.com",
+      projectId: "project-x-690a8",
+      storageBucket: "project-x-690a8.appspot.com",
+      messagingSenderId: "434893165149",
+      appId: "1:434893165149:web:8eaf44bfbf50f5af28f3b4",
+      measurementId: "G-8XS8KX9FBL"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 
 </body>
 </html>
