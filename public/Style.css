@@ -16,7 +16,7 @@ body{
     min-height: 100vh;/*altura minima*/
     background-image: linear-gradient(#8AA6A3,#127369);/*cria um fundo gradiente*/
     background-attachment: fixed;/*define se o bloco vai rolar no viewport*/
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;/*seta o "peso" da fonte*/
     color: black;
