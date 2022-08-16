@@ -4,132 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="/public/Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <!-- Main -->
-<div class="main">
-    <section class="home-section align-itens-center">
-        <div class="container">
-            <div class="row align-itens-center">
-                <div class="home-text">
-                    <p>Bem-Vindo, Eu sou</p>
-                    <h1>João Victor</h1>
-                    <h2>Full Stack Developer</h2>
-                    <a href="" class="btn">Sobre mim</a>
-                    <a href="" class="btn" >Contato</a>
-                </div>
-                <div class="home-img">
-                    <div class="img-box">
-                        <img src="imagens/Foto.png" alt="">
-                    </div>
-                </div>
-            </div>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container"><img src="/public/imagens/NAV ONE.png" alt="logo"></div>
+            <div class="profile-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    <li class="menu-list-item">programação</li>
+                    <li class="menu-list-item">menu</li>
+                    <li class="menu-list-item">ingressos</li>
+                </ul></div>
+            <div class="menu-container"><button>Login</button> <button>Cadastrar</button></div>
         </div>
-    </section>
-    <section class="about-section sec-padding ">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2>Sobre mim</h2>
-                    <p>Nome: João Victor Pereira Mokdcy Barros <br> Endereço: Manaus-AM <br> Idioma: Português <br> Contato: joaovictorpereiramokdcybarros@gmail.com</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="about-img">
-                    <div class="img-box">
-                        <img src="imagens/" alt="">
-                    </div>
-                </div>
-                <div class="about-text">
-                    <h3>skills</h3>
-                    <div class="skills">
-                        <div class="skills-itens">Html</Html></div>
-                        <div class="skills-itens">Css</div>
-                        <div class="skills-itens">Sql</div>
-                        <div class="skills-itens">Java</div>
-                        <div class="skills-itens">C</div>
-                        <div class="skills-itens">Python</div>
-                    </div>
-                    <div class="about-tabs">
-                        <button type="button" class="tab-item" data-target="#education">Formação Acadêmica</button>
-                    </div>
-                    <div class="tab-content" id="education">
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <span class="date">2021 - 2023</span>
-                                <h4>Ensino medio tecnico - <span>Fundação Matias Machline</span></h4>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias assumenda obcaecati consequatur dicta omnis sed!</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="portfolio-section sec-padding">
-        <div class="container">
-            <div class="row">
-                <div class="section-title">
-                    <h2>Projetos</h2>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-tumbnail">
-                        <img src="imagens/landingPage.png" alt="">
-                    </div>
-                    <h3 class="portfolio-item-text">Landing Page </h3>
-                </div>
-                <button type="button" class="btn">Ver projeto</button>
-                
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-tumbnail">
-                        <img src="imagens/ProjectAI.png" alt="">
-                    </div>
-                    <h3 class="portfolio-item-text">site de turma </h3>
-                </div>
-                <button type="button" class="btn">Ver projeto</button>
-                
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-item-tumbnail">
-                        <img src="imagens/Login.png" alt="">
-                    </div>
-                    <h3 class="portfolio-item-text">site de turma </h3>
-                </div>
-                <button type="button" class="btn">Ver projeto</button>
-                
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyB0xYXJW8tS_Y_tiSBuVWTgSJ7PIWdzDDo",
-      authDomain: "project-x-690a8.firebaseapp.com",
-      databaseURL: "https://project-x-690a8-default-rtdb.firebaseio.com",
-      projectId: "project-x-690a8",
-      storageBucket: "project-x-690a8.appspot.com",
-      messagingSenderId: "434893165149",
-      appId: "1:434893165149:web:8eaf44bfbf50f5af28f3b4",
-      measurementId: "G-8XS8KX9FBL"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
-
+    </div>
 </body>
 </html>
