@@ -4,64 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="./Style/Style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Home</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-container">
-            <div class="logo-container"><img src="./imagens/NAV ONE.png" alt="logo"></div>
-            <div class="profile-container">
-                <ul class="menu-list">
-                    <li class="menu-list-item active">Home</li>
-                    <li class="menu-list-item">programação</li>
-                    <li class="menu-list-item">menu</li>
-                    <li class="menu-list-item">ingressos</li>
-                </ul></div>
-            <div class="menu-container"><button><a href="./Cadastrar.html">Login</a></button> <button>Cadastrar</button></div>
-        </div>
-    </div>
-        <div class="slider">
-            <div class="slides">
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-            </div>
-            <div class="slide first"><img src="/public/imagens/FD1vP6lWQAMNHQl-1.jpg" alt=""></div>
-                <div class="slide"><img src="/public/imagens//aquaman_34.jpg" alt=""></div>
-                <div class="slide"><img src="/public/imagens//John-Wick-4.jpg alt=""></div>
-                <div class="slide"><img src="/public/imagens/image1.jpg" alt=""></div>
-            </div>
-
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
-        </div>
-        <div class="row">
-            <h2>Lançamentos</h2>
-            <div class="row_poster">
-                <img src="/public/imagens/" alt="" class="row__poster row__posterLarge">
-                <img src="" alt="" class="row__poster row__posterLarge">
-                <img src="" alt="" class="row__poster row__posterLarge">
-                <img src="" alt="" class="row__poster row__posterLarge">
-                <img src="" alt="" class="row__poster row__posterLarge">
-                <img src="" alt="" class="row__poster row__posterLarge">
-                <img src="" alt="" class="row__poster row__posterLarge">
-            </div>
-        </div>
+    <header>
+        <a href="" class="logo">CineMonkey <i class='bx bx-movie'></i></a>
+        <div class="bx bx-menu" id="menu-id"></div>
+        <ul class="navbar">
+            <li><a href="#home" class="home-active">Home</a></li>
+            <li><a href="#home">Programação</a></li>
+            <li><a href="#home">Menu</a></li>
+            <li><a href="#home">Ingresso</a></li>
+        </ul>
+        <a href="./pages/Cadastrar.html" class="btn">Sign In</a>
+    </header>
 </body>
 </html>
