@@ -168,6 +168,19 @@ body{
     color: #fff;
 }
 
+.container .form .divider{
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+.container .form .medias-socias{
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.container .form .medias-socias i:hover{
+    color: red;
+}
 @media screen and (max-width: 1230px){
     .form-image{
         display: none;
