@@ -27,14 +27,17 @@
                     <div class="input-box">
                     <div class="input-box">
                         <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="Digite aqui seu e-mail" required>
+                        <input id="email" type="email" name="email" placeholder="Digite aqui seu e-mail" required onchange="validateFields()">
                     </div>
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required onchange="validateFields()">
                     </div>
                 <div class="continue-button">
-                    <button><a href="#">continuar</a></button>
+                    <button id="login-buttom" disabled="true">Entrar</button>
+                </div>
+                <div class="forget-password">
+                    <button id="reset-password" disabled="true">Esqueceu sua senha??</button>
                 </div>
                 <div class="divider"> ou </div>
                 <div class="medias-socias">
@@ -45,5 +48,8 @@
             </form>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
