@@ -27,11 +27,14 @@
                     <div class="input-box">
                     <div class="input-box">
                         <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="Digite aqui seu e-mail" required onchange="validateFields()">
+                        <input id="email" type="email" name="email" placeholder="Digite aqui seu e-mail" required onchange="onChangeEmail()">
+                        <div class="error" id="email-required-error">email é obrigatorio</div>
+                        <div class="error" id="email-invalid-error">email é invalido</div>
                     </div>
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required onchange="validateFields()">
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required onchange="onChangePassword()">
+                        <div class="error" id="password-required-error">Senha é obrigatario</div>
                     </div>
                 <div class="continue-button">
                     <button id="login-buttom" disabled="true">Entrar</button>
