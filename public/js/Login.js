@@ -1,10 +1,7 @@
-function onChangeEmail() {
-    toggleBottonsDisable();
-    toggleEmailErrors();
-}
-function onChangePassword() {
-    toggleBottonsDisable();
-    togglePasswordErrors();
+function validadeFields() {
+    const emailValid = isEmailValid();
+    const passwordValid = isPasswordValid();
+    document.getElementById('login-button').disabled = !emailValid;
 }
     function validateEmail(email) {
         var re = /\S+@\S+\.\S+/;
@@ -28,38 +25,6 @@ function onChangePassword() {
         return true;
     }
 
-    function toggleEmailErrors() {
-        const email = document.getElementById("email").value;
-        if (!email) {
-            
-        } else {
-            
-        }
-
-        if (validateEmail(email)) {
-            
-        } else {
-            
-        }
-    }
-
-    function togglePasswordErrors() {
-        const password = document.getElementById('senha').value;
-        if (!password) {
-            
-        } else {
-            
-        }
-    }
-    function toggleBottonsDisable() {
-        const emailValid = isEmailValid();
-        document.getElementById('login-button').disabled = !emailValid;
-    
-    }
-
     function login() {
-        if () {
-            window.location.href = './index.html';
-        }
-        
+        window.location.href = "index.html";
     }

@@ -20,14 +20,14 @@
                         <h1>Login</h1>
                     </div>
                         <div class="input-box">
-                            <input type="text" placeholder="Enter your email" required id="email">
+                            <input type="text" placeholder="Enter your email" required id="email" onchange="validadeFields()">
                         </div>
                         <div class="input-box">
-                            <input type="password" placeholder="Enter your password" required id="senha">
+                            <input type="password" placeholder="Enter your password" required id="senha" onchange="validadeFields()">
                         </div>
                         <div class="forgot"><a href="#">esqueceu sua senha?</a></div>
                         <div class="input-box">
-                            <input type="submit" value="Entrar" id="login-button" onclick="login()">
+                            <input type="submit" value="Entrar" id="login-button" onclick="login()" disabled>
                         </div>
                         <div class="divider">ou</div>
                         <div class="medias-socias">
