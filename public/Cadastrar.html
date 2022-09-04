@@ -25,27 +25,27 @@
                 <div class="input-group">
                     <div class="input-box">
                         <label for="Firstname">Primeiro Nome</label>
-                        <input id="Firstname" type="text" name="firstname" placeholder="Digite aqui seu primeiro nome" required>
+                        <input id="Firstname" type="text" name="firstname" placeholder="Digite aqui seu primeiro nome" >
                     </div>
                     <div class="input-box">
                         <label for="lastname">Sobrenome</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Digite aqui seu sobrenome" required>
+                        <input id="lastname" type="text" name="lastname" placeholder="Digite aqui seu sobrenome" >
                     </div>
                     <div class="input-box">
                         <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="Digite aqui seu e-mail" required>
+                        <input id="email" type="email" name="email" placeholder="Digite aqui seu e-mail" >
                     </div>
                     <div class="input-box">
                         <label for="tel">Celular</label>
-                        <input id="tel" type="tel" name="tel" placeholder="(xx) xxxx-xxxx" required>
+                        <input id="tel" type="tel" name="tel" placeholder="(xx) xxxx-xxxx" >
                     </div>
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" >
                     </div>
                     <div class="input-box">
                         <label for="password">Confirme sua Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha novamente" required>
+                        <input id="re_password" type="password" name="password" placeholder="Digite sua senha novamente" >
                         <div class="gender-inputs">
                             <div class="gender-title">
                                 <h6>Gênero</h6>
@@ -64,10 +64,36 @@
                     </div>
                 </div>
                 <div class="continue-button">
-                    <button onclick="login()">continuar</button>
+                    <button onclick="registrar()">continuar</button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="./js/Login.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyB0xYXJW8tS_Y_tiSBuVWTgSJ7PIWdzDDo",
+          authDomain: "project-x-690a8.firebaseapp.com",
+          databaseURL: "https://project-x-690a8-default-rtdb.firebaseio.com",
+          projectId: "project-x-690a8",
+          storageBucket: "project-x-690a8.appspot.com",
+          messagingSenderId: "434893165149",
+          appId: "1:434893165149:web:8eaf44bfbf50f5af28f3b4",
+          measurementId: "G-8XS8KX9FBL"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+      </script>
 </body>
 </html>
