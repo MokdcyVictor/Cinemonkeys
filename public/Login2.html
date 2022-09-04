@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Style/Style._login.css">
+    <script src="https://kit.fontawesome.com/a3fc4c0d0c.js" crossorigin="anonymous"></script>
+    <title>Tela Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-img" >
+            <img src="./imagens/undraw_access_account_re_8spm.svg" alt="" width="100%">
+        </div>
+        <div class="login-form">
+            <form action="">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Login</h1>
+                    </div>
+                        <div class="input-box">
+                            <input type="text" placeholder="Enter your email" required id="email">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Enter your password" required id="senha">
+                        </div>
+                        <div class="forgot"><a href="#">esqueceu sua senha?</a></div>
+                        <div class="input-box">
+                            <input type="submit" value="Entrar" id="login-button" onclick="login()">
+                        </div>
+                        <div class="divider">ou</div>
+                        <div class="medias-socias">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-google"></i>
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="signup-text">
+                            Não tenho uma conta? <a href="./Cadastrar.html">Crie uma agora</a>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/Login.js"></script>
+</body>
+</html>
