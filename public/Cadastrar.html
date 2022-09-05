@@ -9,31 +9,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="form-image">
-            <img src="./imagens/undraw_web_search_re_efla.svg" alt="">
+        <div class="login-img" >
+            <img src="./imagens/undraw_innovative_re_rr5i.svg" alt="" width="100%">
         </div>
-        <div class="form">
+        <div class="login-form">
             <form action="">
                 <div class="form-header">
                     <div class="title">
-                        <h1>cadastre-se</h1>
+                        <h1>Registrar-se</h1>
                     </div>
-                    <div class="login-button">
-                        <button><a href="./Login.html">entrar</a></button>
-                    </div>
-                </div>
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="Digite aqui seu e-mail" >
-                    </div>
-                    <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" >
-                    </div>
-                </div>
-                <div class="continue-button">
-                    <button id="register_button" type="submit" onclick="registrar()">continuar</button>
+                        <div class="input-box">
+                            <input type="email" placeholder="Enter your email" required id="email">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Enter your password" id="password">
+                        </div>
+                        <div class="input-box">
+                            <button type="submit" id="register_button" onclick="login()">Registrar</button>
+                        </div>
+                        <div class="signup-text">
+                            Já tem uma Conta? <a href="./Login2.html">Faça login</a>
+                        </div>
                 </div>
             </form>
         </div>
@@ -71,14 +67,15 @@
         .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        alert(user)
+        alert("Usuario Cadastrado com Sucesso")
+        window.location.href = "index.html"
         // ...
         })
         .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage)
-        window.location.href = "index.html"
+        alert("Erro ao Cadastrar o Usuario")
+
         // ..
         });
     });
