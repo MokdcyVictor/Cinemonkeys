@@ -24,47 +24,16 @@
                 </div>
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="Firstname">Primeiro Nome</label>
-                        <input id="Firstname" type="text" name="firstname" placeholder="Digite aqui seu primeiro nome" >
-                    </div>
-                    <div class="input-box">
-                        <label for="lastname">Sobrenome</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Digite aqui seu sobrenome" >
-                    </div>
-                    <div class="input-box">
                         <label for="email">Email</label>
                         <input id="email" type="email" name="email" placeholder="Digite aqui seu e-mail" >
-                    </div>
-                    <div class="input-box">
-                        <label for="tel">Celular</label>
-                        <input id="tel" type="tel" name="tel" placeholder="(xx) xxxx-xxxx" >
                     </div>
                     <div class="input-box">
                         <label for="password">Senha</label>
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" >
                     </div>
-                    <div class="input-box">
-                        <label for="password">Confirme sua Senha</label>
-                        <input id="re_password" type="password" name="password" placeholder="Digite sua senha novamente" >
-                        <div class="gender-inputs">
-                            <div class="gender-title">
-                                <h6>Gênero</h6>
-                            </div>
-                            <div class="gender-group">
-                                <div class="gender-input">
-                                    <input type="radio" id="female" name="gender">
-                                    <label for="female">Feminino</label>
-                                </div>
-                                <div class="gender-input">
-                                    <input type="radio" id="male" name="gender">
-                                    <label for="male">Masculino</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="continue-button">
-                    <button onclick="registrar()">continuar</button>
+                    <button id="register_button" type="submit" onclick="registrar()">continuar</button>
                 </div>
             </form>
         </div>
@@ -73,7 +42,7 @@
     <script type="module">
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
+        import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.9.4/firebase-auth.js";
 
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
@@ -94,6 +63,25 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
 
-      </script>
+        document.getElementById('register_button').addEventListener("click",function(){
+        const email = "afdsafsadf@admin.com"
+        const password = "123456"
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        alert(user)
+        // ...
+        })
+        .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage)
+        window.location.href = "index.html"
+        // ..
+        });
+    });
+    </script>
 </body>
 </html>
