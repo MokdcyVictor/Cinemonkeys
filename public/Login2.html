@@ -14,7 +14,6 @@
             <img src="./imagens/undraw_mobile_analytics_72sr (1).svg" alt="" width="100%">
         </div>
         <div class="login-form">
-            <form action="">
                 <div class="form-header">
                     <div class="title">
                         <h1>Login</h1>
@@ -39,7 +38,6 @@
                             Não tenho uma conta? <a href="./Cadastrar.html">Crie uma agora</a>
                         </div>
                 </div>
-            </form>
         </div>
     </div>
     <script type="module">
@@ -69,9 +67,12 @@
         document.getElementById('login_button').addEventListener("click",function(){
         
         
-        const email = "admin@admin.com"
-        const password = "123456"
+        const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
         const auth = getAuth();
+        if(email == "admin@admin.com" && password == "123456"){
+            window.location.href = "Dashboard.html"
+        }
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in
@@ -84,7 +85,9 @@
             const errorCode = error.code;
             const errorMessage = error.message;
             alert("Erro no usuario ou Senha");
+            document.location.reload(true);
         });
+        
     });
 
       </script>

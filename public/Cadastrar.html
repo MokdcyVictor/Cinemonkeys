@@ -13,7 +13,6 @@
             <img src="./imagens/undraw_innovative_re_rr5i.svg" alt="" width="100%">
         </div>
         <div class="login-form">
-            <form action="">
                 <div class="form-header">
                     <div class="title">
                         <h1>Registrar-se</h1>
@@ -31,7 +30,6 @@
                             Já tem uma Conta? <a href="./Login2.html">Faça login</a>
                         </div>
                 </div>
-            </form>
         </div>
     </div>
     <script src="./js/Login.js"></script>
@@ -60,15 +58,15 @@
         const app = initializeApp(firebaseConfig);
 
         document.getElementById('register_button').addEventListener("click",function(){
-        const email = "afdsafsadf@admin.com"
-        const password = "123456"
+        const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
         alert("Usuario Cadastrado com Sucesso")
-        window.location.href = "index.html"
+        window.location.href = "Login2.html"
         // ...
         })
         .catch((error) => {
