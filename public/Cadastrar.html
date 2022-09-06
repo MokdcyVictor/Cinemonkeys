@@ -77,6 +77,29 @@
         // ..
         });
     });
+
+    document.addEventListener('keydown', function(e){
+        if (e.key == 'Enter') {
+            const email = document.getElementById('email').value
+        const password = document.getElementById('password').value
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        alert("Usuario Cadastrado com Sucesso")
+        window.location.href = "Login2.html"
+        // ...
+        })
+        .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert("Erro ao Cadastrar o Usuario")
+
+        // ..
+        });
+        }
+    })
     </script>
 </body>
 </html>

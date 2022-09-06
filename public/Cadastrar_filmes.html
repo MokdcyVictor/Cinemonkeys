@@ -108,7 +108,18 @@
         alert('cadastro do filme efetuado com sucesso');
         
         })
+        document.addEventListener('keydown', function(e){
+        if (e.key == 'Enter') {
+            addDoc(collection(db, "Film"), {
+        Name: document.getElementById('Nome').value,
+        Author: document.getElementById('Autor').value,
+        Product: document.getElementById('Produtor').value,
+        Date: document.getElementById('Ano').value
+        });
+        alert('cadastro do filme efetuado com sucesso');
         
+        }
+    })
 
     </script>
 </body>
