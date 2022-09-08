@@ -26,25 +26,24 @@ body{
     padding: 40px 30px;
 }
 
-.title{
+.container .login-form .title{
     position: relative;
     font-size: 24px;
     font-weight: 500;
     color: black;
-    margin-bottom: 70px;
 }
 
-.title::before{
+.container .login-form .title::before{
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     height: 3px;
-    width: 50px;
+    width: 25px;
     background-color: #ff4500;
 }
 
-.input-box{
+.container .login-form .input-box{
     display: flex;
     align-items: center;
     height: 50px;
@@ -63,15 +62,14 @@ body{
     font-weight: 500;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
-
 }
 
-.input-box input:focus,.input-box input:valid{
+.container .login-form .input-box input:focus, .container .login-form .input-box input:valid{
     border-color: black;
 
 }
 
- .input-box button{
+.container .login-form .input-box button{
     height: 100%;
     width: 100%;
     outline: none;
@@ -85,66 +83,42 @@ body{
     color: #fff;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 3rem;
 }
 
-.input-box input[type="submit"][disabled]{
+.container .login-form .input-box input[type="submit"][disabled]{
     opacity: 0.7;
 }
 
-.forgot a{
+.container .login-form .forgot a{
     color: orangered;
     text-decoration: none;
 }
 
-.login-img{
+.container .login-form .divider{
+    text-align: center;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.container .login-form .medias-socias{
+    text-align: center;
+}
+
+.container .login-form .medias-socias i{
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.container .login-form .medias-socias i:hover{
+    color: orangered;
+}
+
+.container .login-form .signup-text a{
+    color: orangered;
+    text-decoration: none;
+}
+
+.container .login-img{
     width: 50%;
 }
-
-.signup-text{
-    font-size: 15px;
-    margin-top: 3rem;
-}
-.signup-text a{
-    color: orangered;
-    text-decoration: none;
-}
-
-/* @media screen and (max-width: 1230px){
-    .form-image{
-        display: none;
-    }
-
-    .container{
-        width: 50%;
-    }
-
-    .form{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 1064px) {
-    .container{
-        width: 90%;
-        height: auto;
-    }
-    .input-group{
-        flex-direction: column;
-        overflow-y: scroll;
-        flex-wrap: nowrap;
-        max-height: 10rem;
-        padding-right: 5rem;
-    }
-
-    .gender-inputs{
-        margin-top: 2rem;
-    }
-
-    .gender-group{
-        flex-direction: column;
-    }
-    .gender-input{
-        margin-top: 0.5rem;
-    }
-} */
