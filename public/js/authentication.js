@@ -1,4 +1,4 @@
-var buttom = document.getElementById('buttom');
+var button = document.getElementById('button');
 var email = document.getElementById('email');
 var password = document.getElementById('password');
 
