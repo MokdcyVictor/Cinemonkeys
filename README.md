@@ -1,6 +1,6 @@
 # CineMonkeys
 
-<img src="Cinemonkey.png" alt="exemplo imagem">
+<img src="Cinemonkeys.png" alt="exemplo imagem">
 
 ## 📄 Goal:
 creating a ticket sales site, your goal is to make uplouder of the website through firebase, also ultilizing a database to store
