@@ -12,7 +12,7 @@
     </ol>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
-        import { collection, addDoc, getFirestore} from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
+        import { query, where, collection, addDoc, getFirestore} from "https://www.gstatic.com/firebasejs/9.9.4/firebase-firestore.js";
         
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
@@ -31,8 +31,9 @@
         };
       
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
+        const app =initializeApp(firebaseConfig);
         const db = getFirestore(app);
+        
 
         const faketransaction = [{
             type: 'expense',
@@ -50,14 +51,11 @@
                 value:10
             }
         }]
-findTransaction()
+        findTransaction()
+
         function findTransaction() {
-            getFirestore()
-            .collection('Film')
-            .get()
-            .then(snapshot => {
-                console.log(snapshot)
-            })
+            const q = query(collection('Film'), where("Author", "==", "dalila"))
+            console.log(q)
         }
         function addTransactionToScreen(transaction) {
                 const orderedList = document.getElementById('transaction')
